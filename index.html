@@ -1,959 +1,416 @@
-<!DOCTYPE html>
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
 
 
+	<!DOCTYPE html>
+	<html>
+		
 
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/">
-
-
-
-
-
-  <title></title>
-  
-
-
-
-
-
-
-
-
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title"></span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+	<body>	
+		<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="PRELOADER" src="/img/logo.png">
+	</div>
 </div>
+<!--Preloader end-->
 
-<nav class="site-nav">
-  
+<!-- header -->
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/Centos7的启动及管理/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/Centos7的启动及管理/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-30T20:24:23+08:00">
-                2018-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>systemd<br>POST –&gt; Boot Sequence –&gt; Bootloader –&gt; kernel + initramfs(initrd) –&gt; rootfs –&gt; /sbin/init<br>init: CentOS 5 SysV init<br>CentOS 6 Upstart<br>CentOS 7 Systemd<br>Systemd：系统启动和服务器守护进程管理器，负责在系统启动 或运行时，激活系统资源，服务器进程和其它进程<br>Systemd新特性<br>系统引导时实现服务并行启动<br>按需启动守护进程<br>自动化的服务依赖关系管理<br>同时采用socket式与D-Bus总线式激活服务<br>系统状态快照    </p>
-<ul>
-<li>总结：<br>grub的区别<br>系统的第一个进程的区别  </li>
-</ul>
-<ul>
-<li>systemd<br>核心概念：unit<br>unit表示不同类型的systemd对象，通过配置文件进行标识和配置；文件中主要包含了系统服务、监听socket、保存的系统快照以及其它与init相关的信息<br>配置文件<br>/usr/lib/systemd/system:每个服务最主要的启动脚本设置，类似于之前的/etc/init.d/<br>/run/systemd/system：系统执行过程中所产生的服务脚本，比上面目录优先运行<br>/etc/systemd/system：管理员建立的执行脚本，类似于  /etc/rcN.d/Sxx的功能，比上面目录优先运行  </li>
-</ul>
-<p>Unit类型<br>systemctl –t help 查看unit类型<br>service unit: 文件扩展名为.service, 用于定义系统服务<br>Target unit: 文件扩展名为.target，用于模拟实现运行级别<br>Device unit: .device, 用于定义内核识别的设备<br>Mount unit: .mount, 定义文件系统挂载点<br>Socket unit: .socket, 用于标识进程间通信用的socket文  件，也可在系统启动时，延迟启动服务，实现按需启动<br>Snapshot unit: .snapshot, 管理系统快照<br>Swap unit: .swap, 用于标识swap设备<br>Automount unit: .automount，文件系统的自动挂载点<br>Path unit: .path，用于定义文件系统中的一个文件或目录使 用,常用于当文件系统变化时，延迟激活服务，如：spool 目录 </p>
-<ul>
-<li>特性<br>关键特性：<br>基于socket的激活机制：socket与服务程序分离<br>基于d-bus的激活机制：<br>基于device的激活机制：<br>基于path的激活机制：<br>系统快照：保存各unit的当前状态信息于持久存储设备中<br>向后兼容sysv init脚本<br>不兼容：<br>systemctl命令固定不变，不可扩展<br>非由systemd启动的服务，systemctl无法与之通信和控制<br>centos7 上的服务用systemctl管理 </li>
-</ul>
-<p>管理服务<br>管理系统服务：<br>CentOS 7: service unit<br>注意：能兼容早期的服务脚本<br>命令：systemctl COMMAND name.service<br>启动：service name start ==&gt; systemctl start   name.service<br>停止：service name stop ==&gt; systemctl stop   name.service<br>重启：service name restart ==&gt; systemctl restart name.service<br>状态：service name status ==&gt; systemctl status name.service   </p>
-<ul>
-<li>管理服务<br>条件式重启：已启动才重启，否则不做操作<br>service name condrestart ==&gt; systemctl try-restart name.service<br>重载或重启服务：先加载，再启动<br>systemctl reload-or-restart name.service<br>重载或条件式重启服务：<br>systemctl reload-or-try-restart name.service<br>禁止自动和手动启动：<br>systemctl mask name.service    通过软连接转移指向实现禁止和启用<br>取消禁止：<br>systemctl unmask name.service    </li>
-</ul>
-<ul>
-<li><p>服务查看<br>查看某服务当前激活与否的状态：<br>systemctl is-active name.service<br>查看所有已经激活的服务：<br>systemctl list-units –type|-t service<br>查看所有服务：<br>systemctl list-units –type service –all|-a<br>chkconfig命令的对应关系：<br>设定某服务开机自启：<br>chkconfig name on ==&gt; systemctl enable name.service<br>设定某服务开机禁止启动：<br>chkconfig name off ==&gt; systemctl disable name.service<br>总结：<br>通过软件接实现服务的enable， disable  等</p>
-</li>
-<li><p>服务查看<br>查看所有服务的开机自启状态：<br>chkconfig –list ==&gt; systemctl list-unit-files –type service<br>用来列出该服务在哪些运行级别下启用和禁用<br>chkconfig sshd –list ==&gt;<br>ls /etc/systemd/system/*.wants/sshd.service<br>查看服务是否开机自启：<br>systemctl is-enabled name.service<br>其它命令：<br>查看服务的依赖关系：<br>systemctl list-dependencies name.service<br>杀掉进程：<br>systemctl kill unitname   </p>
-</li>
-</ul>
-<ul>
-<li>服务状态<br>systemctl list-unit-files –type service –all显示状态<br>loaded Unit配置文件已处理  （已加载）<br>active(running) 一次或多次持续处理的运行  （活动状态）<br>active(exited) 成功完成一次性的配置   （执行一次退出）<br>active(waiting) 运行中，等待一个事件<br>inactive 不运行<br>enabled 开机启动<br>disabled 开机不启动<br>static 开机不启动，但可被另一个启用的服务激活    </li>
-</ul>
-<ul>
-<li>systemctl 命令示例<br>显示所有单元状态<br>systemctl 或 systemctl list-units<br>只显示服务单元的状态<br>systemctl –type=service<br>显示sshd服务单元<br>systemctl –l status sshd.service<br>验证sshd服务当前是否活动<br>systemctl is-active sshd<br>启动，停止和重启sshd服务<br>systemctl start sshd.service<br>systemctl stop sshd.service<br>systemctl restart sshd.service<br>重新加载配置<br>systemctl reload sshd.service<br>列出活动状态的所有服务单元<br>systemctl list-units –type=service<br>列出所有服务单元<br>systemctl list-units –type=service –all<br>查看服务单元的启用和禁用状态<br>systemctl list-unit-files –type=service<br>列出失败的服务<br>systemctl –failed –type=service<br>列出依赖的单元<br>systemctl list-dependencies sshd<br>验证sshd服务是否开机启动<br>systemctl is-enabled sshd<br>禁用network，使之不能自动启动,但手动可以<br>systemctl disable network<br>启用network<br>systemctl enable network<br>禁用network，使之不能手动或自动启动<br>systemctl mask network<br>启用network<br>systemctl unmask network    </li>
-</ul>
-<ul>
-<li><p>service unit文件格式<br>/etc/systemd/system：系统管理员和用户使用  /usr/lib/systemd/system：发行版打包者使用<br>以 “#” 开头的行后面的内容会被认为是注释<br>相关布尔值，1、yes、on、true 都是开启，0、no、off、false 都是关闭<br>时间单位默认是秒，所以要用毫秒（ms）分钟（m）等须显式说明<br>service unit file文件通常由三部分组成：<br>[Unit]：定义与Unit类型无关的通用选项；用于提供unit的描述信息、unit行为及依赖关系等<br>[Service]：与特定类型相关的专用选项；此处为Service类型<br>[Install]：定义由“systemctl enable”以及”systemctl   disable“命令在实现服务启用或禁用时用到的一些选项    </p>
-</li>
-<li><p>service unit文件格式<br>Unit段的常用选项：<br>Description：描述信息<br>After：定义unit的启动次序，表示当前unit应该晚于哪些unit启  动，其功能与Before相反<br>Requires：依赖到的其它units，强依赖，被依赖的units无法激活时，当前unit也无法激活<br>Wants：依赖到的其它units，弱依赖<br>Conflicts：定义units间的冲突关系     </p>
-</li>
-</ul>
-<ul>
-<li><p>service unit文件格式<br>Service段的常用选项：<br>Type：定义影响ExecStart及相关参数的功能的unit进程启动类型<br>•simple：默认值，这个daemon主要由ExecStart接的指令串来启动，启动后常驻于内存中<br>•forking：由ExecStart启动的程序透过spawns延伸出其他子程序来作为此daemon的主要服务。原生父程序在启动结束后就会终止<br>•oneshot：与simple类似，不过这个程序在工作完毕后就结束了，不会常驻在内存中<br>•dbus：与simple类似，但这个daemon必须要在取得一个D-Bus的名称后，才会继续运作.因此通常也要同时设定BusNname= 才行<br>•notify：在启动完成后会发送一个通知消息。还需要配合 NotifyAccess 来让 Systemd 接收消息<br>•idle：与simple类似，要执行这个daemon必须要所有的工作都顺利执行完毕后才会执行。这类的daemon通常是开机到最后才执行即可的服务  </p>
-</li>
-<li><p>service unit文件格式<br>Install段的常用选项：<br>•Alias：别名，可使用systemctl command Alias.service<br>•RequiredBy：被哪些units所依赖，强依赖<br>•WantedBy：被哪些units所依赖，弱依赖<br>•Also：安装本服务的时候还要安装别的相关服务<br>注意：对于新创建的unit文件，或者修改了的unit文件，要通知systemd重载此配置文件,而后可以选择重启<br>systemctl daemon-reload    </p>
-</li>
-</ul>
-<p>总结：<br>写成service unit 文件格式是为了用systemctl 管理</p>
-<ul>
-<li>服务Unit文件示例：<br>vim /etc/systemd/system/bak.service<br>[Unit]<br>Description=backup /etc<br>Requires=atd.service<br>[Service]<br>Type=simple<br>ExecStart=/bin/bash -c “echo /testdir/bak.sh|at now”<br>[Install]<br>WantedBy=multi-user.target<br>systemctl daemon-reload   加载到内存<br>systemctl start bak  </li>
-</ul>
-<pre><code>[root@Centos7 system]#vim httpd.service 
-[Unit]
-Description=The Apache HTTP Server
-After=network.target remote-fs.target nss-lookup.target
-Documentation=man:httpd(8)
-Documentation=man:apachectl(8)
-
-[Service]
-Type=notify  
-EnvironmentFile=/etc/sysconfig/httpd  
-ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND  
-ExecReload=/usr/sbin/httpd $OPTIONS -k graceful  
-ExecStop=/bin/kill -WINCH ${MAINPID}  
-# We want systemd to give httpd some time to finish  gracefully, but still want  
-# it to kill httpd after TimeoutStopSec if something went wrong during the  
-# graceful stop. Normally, Systemd sends SIGTERM signal right after the  
-# ExecStop, which would kill httpd. We are sending useless SIGCONT here to give  
-# httpd time to finish.  
-KillSignal=SIGCONT  
-PrivateTmp=true  
-
-[Install]  
-WantedBy=multi-user.target     
-</code></pre><ul>
-<li>运行级别<br>target units：  （服务状态集|相当与运行级别）<br>unit配置文件：.target<br>ls /usr/lib/systemd/system/*.target<br>systemctl list-unit-files –type target –all<br>运行级别：<br>0 ==&gt; runlevel0.target, poweroff.target<br>1 ==&gt; runlevel1.target, rescue.target<br>2 ==&gt; runlevel2.target, multi-user.target<br>3 ==&gt; runlevel3.target, multi-user.target<br>4 ==&gt; runlevel4.target, multi-user.target<br>5 ==&gt; runlevel5.target, graphical.target<br>6 ==&gt; runlevel6.target, reboot.target<br>查看依赖性：<br>systemctl list-dependencies graphical.target   </li>
-</ul>
-<ul>
-<li>运行级别<br>级别切换：init N ==&gt; systemctl isolate name.target<br>systemctl isolate multi-user.target<br>注：只有/lib/systemd/system/*.target文件中AllowIsolate=yes 才能切换(修改文件需执行systemctl daemon-reload才能生效)<br>查看target：<br>runlevel ;who -r<br>systemctl list-units –type target<br>获取默认运行级别：<br>/etc/inittab ==&gt; systemctl get-default<br>修改默认级别：<br>/etc/inittab ==&gt; systemctl set-default   name.target<br>systemctl set-default multi-user.target<br>ls –l /etc/systemd/system/default.target   </li>
-</ul>
-<ul>
-<li>其它命令<br>切换至紧急救援模式：<br>systemctl rescue<br>切换至emergency模式：<br>systemctl emergency<br>其它常用命令：<br>传统命令init，poweroff，halt，reboot都成为<br>systemctl的软链接<br>关机：systemctl halt、systemctl poweroff<br>重启：systemctl reboot<br>挂起：systemctl suspend<br>休眠：systemctl hibernate<br>休眠并挂起：systemctl hybrid-sleep  </li>
-</ul>
-<h3 id="Centos7-引导顺序"><a href="#Centos7-引导顺序" class="headerlink" title="Centos7 引导顺序"></a>Centos7 引导顺序</h3><p>UEFi或BIOS初始化，运行POST开机自检<br>选择启动设备<br>引导装载程序, centos7是grub2<br>加载装载程序的配置文件：<br>/etc/grub.d/<br>/etc/default/grub<br>/boot/grub2/grub.cfg<br>加载initramfs驱动模块<br>加载内核选项<br>内核初始化，centos7使用systemd代替init<br>执行initrd.target所有单元，包括挂载  /etc/fstab<br>从initramfs根文件系统切换到磁盘根目录<br>systemd执行默认target配置，配置文件  /etc/systemd/system/default.target   </p>
-<ul>
-<li><p>CentOS7引导顺序<br>systemd执行sysinit.target初始化系统及   basic.target准备操作系统<br>systemd启动multi-user.target下的本机与服务器服务<br>systemd执行multi-user.target下 /etc/rc.d/rc.local<br>Systemd执行multi-user.target下的    getty.target及登录服务<br>systemd执行graphical需要的服务</p>
-</li>
-<li><p>设置内核参数<br>设置内核参数，只影响当次启动<br>启动时，在linux16行后添加<br>systemd.unit=desired.target<br>systemd.unit=emergency.target<br>systemd.unit=rescue.target<br>rescue.target 比emergency 支持更多的功能，例如日志等<br>systemctl default 进入默认target<br>分析各阶段启动花费的时间<br>[root@Centos7 grub.d]#systemd-analyze<br>Startup finished in 2.366s (kernel) + 4.155s (initrd) + 34.117s (userspace) = 40.639s</p>
-</li>
-</ul>
-<ul>
-<li><p>启动排错<br>文件系统损坏<br>先尝试自动修复，失败则进入emergency shell，<br>提示用户修复<br>在/etc/fstab不存在对应的设备和UUID<br>等一段时间，如不可用，进入emergency shell<br>在/etc/fstab不存在对应挂载点<br>systemd 尝试创建挂载点，否则提示进入  emergency shell.<br>在/etc/fstab不正确的挂载选项<br>提示进入emergency shell</p>
-</li>
-<li><p>破解CentOS7的root口令方法一<br>启动时任意键暂停启动<br>按e键进入编辑模式<br>将光标移动linux16开始的行，添加内核参数  rd.break（打断正常启动）<br>按ctrl-x启动<br>mount –o remount,rw /sysroot<br>chroot /sysroot<br>passwd root<br>touch /.autorelabel<br>exit<br>reboot    </p>
-</li>
-</ul>
-<ul>
-<li>破解CentOS7的root口令方法二<br>启动时任意键暂停启动<br>按e键进入编辑模式<br>将光标移动linux16开始的行，改为rw  init=/sysroot/bin/sh<br>按ctrl-x启动<br>chroot /sysroot<br>passwd root<br>touch /.autorelabel<br>exit<br>reboot  </li>
-</ul>
-<p>增加编辑模式 下口令<br>cp /boot/grub2/grub.cfg /date/<br>grub2-setpassword  </p>
-<ul>
-<li>修复GRUB2<br>GRUB“the Grand Unified Bootloader”<br>引导提示时可以使用命令行界面<br>可从文件系统引导<br>主要配置文件 /boot/grub2/grub.cfg<br>修复配置文件<br>grub2-mkconfig &gt; /boot/grub2/grub.cfg<br>修复grub<br>grub2-install /dev/sda BIOS环境<br>grub2-install UEFI环境<br>调整默认启动内核<br>vim /etc/default/grub   打开/etc/default/grub 文档<br>GRUB_DEFAULT=0   修改GRUB_DEFAULT这个值<br>grub2-mkconfig &gt;/boot/grub2/grub.cfg</li>
-</ul>
-<p>默认以那个内核作为启动项<br>/etc/default/grub<br>GRUB_DEFAULT=saved</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/dd/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/dd/" itemprop="url">dd</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T16:15:07+08:00">
-                2018-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T16:00:34+08:00">
-                2018-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
+	<header id="header-bg-2">
 
 	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+	
+	<!-- motto or description -->
+		
+ 		<p class="motto"></p>
+	
+	
+	<!-- current page name or title -->
+	
+		
+		
+			
+			<p class="page-name">主页</p>	
+			
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		12/1/2018 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
+</header>
+
+<!-- nav -->
+<div id="cd-nav">
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+		</ul>
+	</nav>
+</div>
+
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		
+	<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed">
+	<div class="am-u-md-12 am-u-sm-12">
+
+		
+			<article class="am-g blog-entry-article">
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
+				</div>	
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+					<span class="theme-annie-post-date">
+						<a href="/2018/11/30/Centos7的启动及管理/" itemprop="url">
+	<time datetime="2018-11-30T12:24:23.767Z" itemprop="datePublished">
+  		2018-11-30
+  </time>
+</a>    
+
+					</span>
+					<span class="theme-annie-post-title">
+						
+					</span>
+					
+					
+						<p>
+							
+								systemdPOST –&gt; Boot Sequence –&gt; Bootloader –&gt; kernel + initramfs(initrd) –&gt; rootfs –&gt; /sbin/initinit: CentOS 5 SysV initCentOS 6 UpstartCentOS 7 SystemdSystemd：系统启动和服务器守护进程管理器，负责在系统启动 或	
+							  
+						</p> 
+					
+
+					
+						<span class="continue-read">      	
+							<a href="/2018/11/30/Centos7的启动及管理/" class="pull-right">
+								展开全文
+							</a>		
+						</span>
+					         		
+				</div>
+		
+			</article>
+		
+			<article class="am-g blog-entry-article">
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
+				</div>	
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+					<span class="theme-annie-post-date">
+						<a href="/2018/11/11/dd/" itemprop="url">
+	<time datetime="2018-11-11T08:15:07.000Z" itemprop="datePublished">
+  		2018-11-11
+  </time>
+</a>    
+
+					</span>
+					<span class="theme-annie-post-title">
+						
+	
+		<a href="/2018/11/11/dd/" itemprop="url">		
+			dd		
+		</a>
+	
+
+					</span>
+					
+					
+						<!--没有文章内容-->
+						<p>没有文章内容...</p>    		
+					
+
+					
+						<span class="continue-read">      	
+							<a href="/2018/11/11/dd/" class="pull-right">
+								展开全文
+							</a>		
+						</span>
+					         		
+				</div>
+		
+			</article>
+		
+			<article class="am-g blog-entry-article">
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
+				</div>	
+
+				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+					<span class="theme-annie-post-date">
+						<a href="/2018/11/11/hello-world/" itemprop="url">
+	<time datetime="2018-11-11T08:00:34.340Z" itemprop="datePublished">
+  		2018-11-11
+  </time>
+</a>    
+
+					</span>
+					<span class="theme-annie-post-title">
+						
+	
+		<a href="/2018/11/11/hello-world/" itemprop="url">		
+			Hello World		
+		</a>
+	
+
+					</span>
+					
+					
+						<p>
+							
+								Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick	
+							  
+						</p> 
+					
+
+					
+						<span class="continue-read">      	
+							<a href="/2018/11/11/hello-world/" class="pull-right">
+								展开全文
+							</a>		
+						</span>
+					         		
+				</div>
+		
+			</article>
+		     
+
+		    	
+	</div>
+</div>
+<!-- content end -->
+
+	<!--图文风格-->
+
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="blog-text-center">
+		<div class="theme-annie-social">
+				
+				
+					<a href="http://github.com/" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Weibo" target="_blank"><i class="fa fa-weibo"></i>&nbsp;</a>
+				
+				
+					<a href="http://github.com/" title="Email" target="_blank"><i class="fa fa-envelope-o"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="QQ" target="_blank"><i class="fa fa-qq"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+						
+				
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			
+				&copy; 2017 - 2018, content by John Doe. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 100px 25% 0;
+		width: 50%;
+		line-height: 1.4;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
 
 
 
 
 
-  
 
 
 
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
 
 
-  
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
 
+	</body>
+	</html>
 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
