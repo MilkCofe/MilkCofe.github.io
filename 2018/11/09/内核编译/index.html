@@ -1,0 +1,473 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+
+	<!DOCTYPE html>
+	<html>
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+	<body>	
+		<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="PRELOADER" src="/img/logo.png">
+	</div>
+</div>
+<!--Preloader end-->
+
+<!-- header -->
+
+	<header id="header-bg-2">
+
+	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+	
+	<!-- motto or description -->
+		
+ 		<p class="motto"></p>
+	
+	
+	<!-- current page name or title -->
+	
+		
+		
+			
+			<p class="page-name">当前文章&nbsp;:&nbsp;《》</p>
+			
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		12/1/2018 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
+</header>
+
+<!-- nav -->
+<div id="cd-nav">
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+		</ul>
+	</nav>
+</div>
+
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+	<div class="am-u-md-8 am-u-sm-12">
+
+		<article class="am-article blog-article-p">
+
+			<div class="am-article-hd">
+				
+
+
+				<h1 class="am-article-title blog-text-center">
+					
+					
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2018/11/09/内核编译/" itemprop="url">
+	<time datetime="2018-11-09T11:33:01.576Z" itemprop="datePublished">
+  		2018-11-09
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<h2 id="内核编译"><a href="#内核编译" class="headerlink" title="内核编译"></a>内核编译</h2><p>单内核体系设计、但充分借鉴了微内核设计体系的优点，为内核引入模块化机制<br>内核组成部分：<br>kernel：内核核心，一般为bzImage，通常在/boot目录下<br>名称为 vmlinuz-VERSION-RELEASE<br>kernel object：内核对象，一般放置于<br>/lib/modules/VERSION-RELEASE/<br>[ ]: N<br>[M]: M<br>[*]: Y<br>辅助文件：ramdisk<br>initrd<br>initramfs   </p>
+<p>编译内核<br>前提：<br>(1) 准备好开发环境<br>(2) 获取目标主机上硬件设备的相关信息<br>(3) 获取目标主机系统功能的相关信息<br>例如:需要启用相应的文件系统<br>(4) 获取内核源代码包<br><a href="http://www.kernel.org" target="_blank" rel="noopener">www.kernel.org</a>   </p>
+<p>开发环境准备<br>包组<br>Development Tools<br>目标主机硬件设备相关信息<br>CPU：<br>cat /proc/cpuinfo<br>x86info -a<br>lscpu    </p>
+<p>硬件设备<br>PCI设备：<br>lspci<br>-v<br>-vv<br>lsusb<br>-v<br>-vv<br>lsblk 块设备<br>了解全部硬件设备信息<br>hal-device：CentOS 6    </p>
+<p>内核编译安装系统<br>安装开发包组<br>下载源码文件<br>.config：准备文本配置文件<br>make menuconfig：配置内核选项<br>make [-j #]<br>make modules_install：安装模块<br>make install ：安装内核相关文件<br>安装bzImage为/boot/vmlinuz-VERSION-RELEASE<br>生成initramfs文件<br>编辑grub的配置文件  </p>
+<p>编译安装内核示例<br>tar xf linux-3.10.67.tar.xz -C /usr/src<br>cd /usr/src<br>ln -sv linux-3.10.67 linux<br>cd /usr/src/linux<br>cp /boot/config-$(uname -r) ./.config<br>make help<br>make menuconfig<br>make -j 2<br>make modules_install<br>make install<br>reboot  </p>
+<p>编译内核<br>(1) 配置内核选项<br>支持“更新”模式进行配置：make help<br>(a) make config：基于命令行以遍历的方式配置内核中可配的每个选项<br>(b) make menuconfig：基于curses的文本窗口界面<br>(c) make gconfig：基于GTK (GNOME）环境窗口界面<br>(d) make xconfig：基于QT(KDE)环境的窗口界面<br>支持“全新配置”模式进行配置<br>(a) make defconfig：基于内核为目标平台提供的“默认”配置进行配置<br>(b) make allyesconfig: 所有选项均回答为“yes“<br>(c) make allnoconfig: 所有选项均回答为“no“   </p>
+<p>编译内核<br>(2) 编译<br>全编译:make [-j #]<br>编译内核的一部分功能：<br>(a) 只编译某子目录中的相关代码<br>cd /usr/src/linux<br>make dir/<br>(b) 只编译一个特定的模块<br>cd /usr/src/linux<br>make dir/file.ko<br>示例：只为e1000编译驱动：<br>make drivers/net/ethernet/intel/e1000/e1000.ko    </p>
+<p>编译内核<br>如何交叉编译内核：<br>编译的目标平台与当前平台不相同<br>make ARCH=arch_name<br>要获取特定目标平台的使用帮助<br>make ARCH=arch_name help<br>示例：<br>make ARCH=arm help   </p>
+<p>内核编译<br>在已经执行过编译操作的内核源码树做重新编译<br>需要事先清理操作：<br>make clean：清理大多数编译生成的文件，但会保留config文件等<br>make mrproper: 清理所有编译生成的文件、config及某些备份文件<br>make distclean：mrproper、清理patches以及编辑器备份文件    </p>
+<p>卸载内核<br>删除/lib/modules/目录下不需要的内核库文件<br>删除/usr/src/linux/目录下不需要的内核源码<br>删除/boot目录下启动的内核和内核映像文件<br>更改grub的配置文件，删除不需要的内核启动列表   </p>
+<p>实验：编译内核 启用NTFS 文件系统<br>下载 linux-4.18.13<br>解压源码包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@Centos7 mkconfig]<span class="comment">#tar -xvf linux-4.18.13   </span></span><br><span class="line">``` </span><br><span class="line">拷贝.config文件</span><br><span class="line">```bash</span><br><span class="line">[root@Centos7 mkconfig]<span class="comment">#cp /boot/config-3.10.0-862.el7.x86_64 /date/mkconfig/linux-4.18.13/.config </span></span><br><span class="line">```  </span><br><span class="line">安装开发包组及其他安装包 搭建编译环境</span><br><span class="line">```bash   </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#yum groupinstall  Development Tools   </span></span><br><span class="line">```    </span><br><span class="line">```bash </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#yum install ncurses-devel</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#yum install elfutils-libelf-devel   </span></span><br><span class="line">```  </span><br><span class="line">```bash  </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#yum search openssl-devel  `</span></span><br><span class="line">```  </span><br><span class="line">配置内核选项 选择NTFX选项并设为[M]</span><br><span class="line">```bash     </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#make menuconfig   </span></span><br><span class="line">```   </span><br><span class="line">开始编译 </span><br><span class="line">```bash   </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#make -j 4 &amp;&amp; &#123; echo -e '\a';sleep 1;echo -e '\a'; &#125;  </span></span><br><span class="line">```   </span><br><span class="line">安装模块</span><br><span class="line">```bash  </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#make modules_install  </span></span><br><span class="line">```  </span><br><span class="line">查看模块安装情况   </span><br><span class="line"> ```bash  </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#ll /lib/modules/*</span></span><br><span class="line">```  </span><br><span class="line">安装内核相关文件  </span><br><span class="line">```bash  </span><br><span class="line">[root@Centos7 linux-4.18.13]<span class="comment">#make install</span></span><br></pre></td></tr></table></figure>
+<p>查看/boot/* 下相关文件</p>
+<pre><code class="bash">[root@Centos7 linux-4.18.13]<span class="comment">#ll /boot/*  </span>
+</code></pre>
+<p>reboot 重启<br>进入开始菜单界面 选择linux-4.18.13启动    </p>
+<pre><code class="bash">[root@Centos7 ~]<span class="comment">#mount /dev/sdb3 /mnt  </span>
+</code></pre>
+<p>更新locate数据库 </p>
+<pre><code class="bash">[root@Centos7 ~]<span class="comment">#updatedb   </span>
+</code></pre>
+<p>查询locate数据库</p>
+<pre><code class="bash">[root@Centos7 ~]<span class="comment">#locate ntfs.ko   </span>
+[root@Centos7 ~]<span class="comment">#locate ntfs.ko</span>
+/date/mkconfig/linux-4.18.13/fs/ntfs/.ntfs.ko.cmd
+/date/mkconfig/linux-4.18.13/fs/ntfs/ntfs.ko
+/usr/lib/modules/4.18.13/kernel/fs/ntfs/ntfs.ko   
+</code></pre>
+<p>再/mnt/创建文件 失败<br>安装ntfx-g3包</p>
+<pre><code class="bash">[root@Centos7 ~]<span class="comment">#yum install ntfs-g3</span>
+</code></pre>
+<p>reboot重启  进入开始菜单界面 选择linux3.10.0-862启动<br>继续挂载/dev/sdb  /mnt/<br>在/mnt创建文件成功<br>删除编译安装  </p>
+<pre><code class="bash">[root@Centos7 linux-4.18.13]<span class="comment">#make clean</span>
+[root@Centos7 linux-4.18.13]<span class="comment">#make mrproper</span>
+[root@Centos7 linux-4.18.13]<span class="comment">#rm -rf  /lib/modules/4.18.13/</span>
+[root@Centos7 boot]<span class="comment">#rm -fr *4.18*</span>
+[root@Centos7 date]<span class="comment">#rm -rf mkconfig/</span>
+</code></pre>
+<p>生成/boot/grub2/grub.cfg 文件  </p>
+<pre><code class="bash">[root@Centos7 boot]<span class="comment">#grub2-mkconfig &gt; /boot/grub2/grub.cfg </span>
+</code></pre>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+    	<li class="am-pagination-prev">
+   		<a class="pull-left" href="/2018/11/30/Centos7的启动及管理/" title="">
+      		&laquo; 上一篇
+		</a>
+		</li>
+	
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2018/11/04/文件压缩/" title="">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
+</div>
+
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
+
+	
+		
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div id="valineComment" class="comment"></div>
+
+<!-- valine`s js & css -->
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
+<link rel="stylesheet" href="/css/comment.css">
+
+<script>
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				//使用id寻找div元素（使用class可能找不到）
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "3333....", //获取APP ID
+				app_key: "3333......", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内核编译"><span class="post-toc-text">内核编译</span></a></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</div></div></aside>
+	
+
+	</div>
+</div>
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="blog-text-center">
+		<div class="theme-annie-social">
+				
+				
+					<a href="http://github.com/" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Weibo" target="_blank"><i class="fa fa-weibo"></i>&nbsp;</a>
+				
+				
+					<a href="http://github.com/" title="Email" target="_blank"><i class="fa fa-envelope-o"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="QQ" target="_blank"><i class="fa fa-qq"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+						
+				
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			
+				&copy; 2017 - 2018, content by John Doe. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 100px 25% 0;
+		width: 50%;
+		line-height: 1.4;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
+
+
+
+
+
+
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
+	</body>
+	</html>
+
